@@ -1,0 +1,26 @@
+{
+    "name": "Ovato WebAR",
+    "short_name" : "OvatoAR",
+    "start_url": "./index.html",
+    "description": "An AR experience to help visualise your products at home",
+    "icons": [
+        {
+            "src": "./assets/icons/Ovato-Logo-32.png",
+            "sizes": "32x32",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/icons/Ovato-Logo-192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "./assets/icons/Ovato-Logo-512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ],
+    "theme_color": "#df4f3d",
+    "background_color": "#273b88",
+    "display": "standalone"
+}

@@ -1,0 +1,125 @@
+.portal {
+    pointer-events: all;
+
+    margin: auto 0;
+    padding: 5px;
+    border: ridge 6px #74b6fe;
+    max-height: 500px;
+    max-width: 100px;
+    overflow: scroll;
+    display: flex;
+    flex-direction: column;
+
+    // overflow-y: hidden;
+    background: #8200c9; /* Old browsers */
+    background: -moz-linear-gradient(top,  #8200c9 0%, #ffbbbb 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  #8200c9 0%,#ffbbbb 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  #8200c9 0%,#ffbbbb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8200c9', endColorstr='#ffbbbb',GradientType=0 ); /* IE6-9 */
+
+    @include media(from tablet) {
+        max-height: 500px;
+        max-width: 150px;
+
+    }
+  
+}
+
+.portal__container {
+    pointer-events: none;
+    display: flex;
+    position: absolute;
+    height: 100%;
+    // top: 10%;
+    // width: 180px;
+
+    transition: transform .5s ease-in-out;
+
+    &--open { transform: translateX(0) }
+    &--closed { transform: translateX(-100px) }
+
+    @include media(from tablet) {
+        &--closed { transform: translateX(-150px) }
+        }
+}
+
+.portal__product {
+    border: solid 4px;
+
+    border-top-color: lighten(#74b6fe, 15%);
+    border-left-color: lighten(#74b6fe, 15%);
+    border-bottom-color: darken(#74b6fe, 15%);
+    border-right-color: darken(#74b6fe, 15%);
+
+    background-color: #74b6fe;
+    padding: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:active {
+        background-color: #74febc;
+        border-top-color: darken(#74febc, 15%);
+        border-left-color: darken(#74febc, 15%);
+        border-bottom-color: lighten(#74febc, 15%);
+        border-right-color: lighten(#74febc, 15%);
+    }
+
+    &:hover { 
+        background-color: #74febc;
+        border-top-color: lighten(#74febc, 15%);
+        border-left-color: lighten(#74febc, 15%);
+        border-bottom-color: darken(#74febc, 15%);
+        border-right-color: darken(#74febc, 15%);
+    }
+
+    &:last-of-type { margin-bottom: 0px; }
+
+    &--active { 
+        background-color: #fe8674;
+        border-top-color: lighten(#fe8674, 15%);
+        border-left-color: lighten(#fe8674, 15%);
+        border-bottom-color: darken(#fe8674, 15%);
+        border-right-color: darken(#fe8674, 15%);
+     }
+
+}
+
+.portal__product-img{
+    max-width: 100%;
+    // height: 100px;
+} 
+
+.portal__toggle {
+    pointer-events: all;
+    margin: auto 0;
+
+    height: 365px;
+    width: 30px;
+
+    border: solid 2px;
+    border-top-color: lighten(#ffbbbb, 15%);
+    border-left-color: lighten(#ffbbbb, 15%);
+    border-bottom-color: darken(#8200c9, 15%);
+    border-right-color: darken(#8200c9, 15%);
+
+    background: #8200c9; /* Old browsers */
+    background: -moz-linear-gradient(bottom,  #8200c9 0%, #ffbbbb 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(bottom,  #8200c9 0%,#ffbbbb 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to top,  #8200c9 0%,#ffbbbb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8200c9', endColorstr='#ffbbbb',GradientType=0 ); /* IE6-9 */
+
+    &:active {
+        border-top-color: darken(#8200c9, 15%);
+        border-left-color: darken(#8200c9, 15%);
+        border-bottom-color: lighten(#ffbbbb, 15%);
+        border-right-color: lighten(#ffbbbb, 15%);
+    }
+
+
+    @include media(from tablet) {
+        height: 500px;
+
+    }
+
+
+}

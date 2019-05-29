@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+
+  <title>Ovato WebAR</title>
+
+  <link rel="manifest" href="/manifest.json">
+
+  <script src="assets/vendor/libs/stats.min.js"></script>
+  <script src="assets/vendor/three.min.js"></script>
+  <script src="assets/vendor/controls/DragControls.js"></script>
+
+  <!-- include jsartookit -->
+  <script src="assets/vendor/libs/jsartoolkit5/artoolkit.min.js"></script>
+  <script src="assets/vendor/libs/jsartoolkit5/artoolkit.api.js"></script>
+  <!-- include threex AR -->
+  <script src="assets/vendor/libs/threex/ARToolkitSource.js"></script>
+  <script src="assets/vendor/libs/threex/ARToolkitContext.js"></script>
+  <script src="assets/vendor/libs/threex/ARBaseControls.js"></script>
+  <script src="assets/vendor/libs/threex/ARMarkerControls.js"></script>
+  <script src="assets/vendor/libs/threex/ARSmoothControls.js"></script>
+
+  <script src="assets/vendor/libs/threex/VolumetricSpotlight.js"></script>
+
+  <!-- include Loaders -->
+  <script src="assets/vendor/loaders/GLTFLoader.js"></script>
+  <script src="assets/vendor/loaders/OBJLoader.js"></script>
+  <script src="assets/vendor/loaders/MTLLoader.js"></script>
+
+
+  <link rel="stylesheet" href="style/main.css"></link>
+</head>
+
+<body style="margin: 0">
+  <div id="ui"></div>
+  <div id="container"></div>
+
+  <div id="updateAvailable" class="notification">A new version of this app is available. Click <a id="reload">here</a> to update.</div>
+
+
+  <script type="text/javascript" src="/main.min.js"></script>
+
+  <script>
+    // let newWorker;
+    // // The click event on the notification
+    // document.getElementById('updateAvailable').addEventListener('click', function () {
+    //   newWorker.postMessage({ action: 'skipWaiting' });
+    // })
+    //
+    // if ('serviceWorker' in navigator) {
+    //
+    //   navigator.serviceWorker
+    //     .register('/sw.js')
+    //     .then(reg => {
+    //       console.log("Service Worker Registered");
+    //
+    //       reg.addEventListener('updatefound', () => {
+    //         // An updated service worker has appeared in reg.installing!
+    //         newWorker = reg.installing;
+    //         newWorker.addEventListener('statechange', () => {
+    //           // Has service worker state changed?
+    //           switch (newWorker.state) {
+    //             case 'installed':
+    //               // There is a new service worker available, show the notification
+    //               if (navigator.serviceWorker.controller) {
+    //                 let notification = document.getElementById('updateAvailable');
+    //                 notification.classList.add('show');
+    //               }
+    //               break;
+    //           }
+    //         });
+    //       })
+    //     }).catch(err => {
+    //       console.log("did not register", err)
+    //     })
+    //
+    //     let refreshing;
+    //     // The event listener that is fired when the service worker updates
+    //     // Here we reload the page
+    //     navigator.serviceWorker.addEventListener('controllerchange', function () {
+    //       if (refreshing) return;
+    //       window.location.reload();
+    //       refreshing = true;
+    //     });
+    // }
+
+  </script>
+
+
+</body>
+
+</html>

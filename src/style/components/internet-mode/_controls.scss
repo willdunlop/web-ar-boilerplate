@@ -1,0 +1,48 @@
+/** CONTROLS */
+.controls {
+    pointer-events: all;
+    position: absolute;
+    bottom: 5%;
+    color: black;
+    width: 100%;
+    display: flex;
+}
+
+.controls__container {
+    margin: 0 auto;
+}
+
+.controls__control {
+    margin: 0 .5em;
+    color: white;
+    border: solid 4px;
+
+    border-top-color: lighten(#ffbbbb, 15%);
+    border-left-color: lighten(#ffbbbb, 15%);
+    border-bottom-color: darken(#8200c9, 15%);
+    border-right-color: darken(#8200c9, 15%);
+
+    background: #8200c9; /* Old browsers */
+    background: -moz-linear-gradient(right,  #8200c9 0%, #ffbbbb 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(right,  #8200c9 0%,#ffbbbb 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to left,  #8200c9 0%,#ffbbbb 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#8200c9', endColorstr='#ffbbbb',GradientType=0 ); /* IE6-9 */
+
+    &:active {
+        border-top-color: darken(#8200c9, 15%);
+        border-left-color: darken(#8200c9, 15%);
+        border-bottom-color: lighten(#ffbbbb, 15%);
+        border-right-color: lighten(#ffbbbb, 15%);
+    }
+
+    &--active {
+        border-top-color: darken(#8200c9, 15%);
+        border-left-color: darken(#8200c9, 15%);
+        border-bottom-color: lighten(#ffbbbb, 15%);
+        border-right-color: lighten(#ffbbbb, 15%);
+    }
+
+
+    &:last-of-type { margin-right: 0; }
+    &:first-of-type { margin-left: 0; }
+}
